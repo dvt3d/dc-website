@@ -2,33 +2,33 @@
 const realizes = [
   {
     name: '二三维一体场景可视化',
-    desc: '',
-    pic: 'https://dc.dvgis.cn/examples/previews/mini-scene/dfmz.gif'
+    desc: '二三维无缝切换，一套代码兼容多种风格。借助该框架，可轻松将地图、各类矢量数据及模型融入场景，让场景呈现更贴近真实世界的视觉效果',
+    pic: '/examples/previews/mini-scene/dfmz.gif'
   },
   {
     name: '知名地图厂商的地图接入',
-    desc: '',
-    pic: ''
+    desc: '高德、百度、腾讯、天地图、Google、MapBox等主流地图厂商的无缝接入，针对国内地图数据，可灵活进行偏移处理',
+    pic: 'examples/previews/mini-scene/ljz.gif'
   },
   {
-    name: '',
-    desc: '',
-    pic: ''
+    name: '数据的统一管理，并支持动画与特效',
+    desc: '通过图层管理操作，可对数据进行针对性筛选与整体控制，支持线、面、圆、模型等的材质效果及细节动画，实现数据属性随时间变化',
+    pic: 'examples/previews/overlay/dynamic_model.gif'
   },
   {
-    name: '',
-    desc: '',
-    pic: ''
+    name: '相机的路径漫游与定点巡航',
+    desc: '相机的自动漫游与巡航功能，可根据预设路线运行，便于快速定位并查看重点区域',
+    pic: 'examples/previews/animation/flying.gif'
   },
   {
-    name: '',
-    desc: '',
-    pic: ''
+    name: '三维空间分析',
+    desc: '强大的测距、面积、高度等量算工具，并支持可视域、通视分析以及日照模拟等三维场景智能分析功能，能够充分满足多样化需求',
+    pic: 'examples/previews/mini-scene/factory.gif'
   },
   {
-    name: '',
-    desc: '',
-    pic: ''
+    name: '第三方图形库的融合',
+    desc: 'Turf、Heatmap、Echarts等多种第三方可视化库的融合，降低用户学习成本，减少重复投入，提升开发效率，助力高效可视化应用开发',
+    pic: 'examples/previews/datav/migrate.gif'
   }
 ]
 </script>
@@ -55,8 +55,8 @@ const realizes = [
           :key="'realize' + index"
         >
           <div class="index">0{{ index + 1 }}</div>
-          {{ item.name }}
-          {{ item.desc }}
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.desc }}</p>
           <img class="img" :src="item.pic" />
         </div>
       </div>
@@ -88,6 +88,7 @@ const realizes = [
     align-items: center;
     justify-content: space-around;
     color: #fff;
+    margin-bottom: 2rem;
     .desc {
       span {
         font-size: 2.5rem;
@@ -104,7 +105,7 @@ const realizes = [
   .feature,
   .why {
     height: 100vh;
-    padding: 2rem 6rem;
+    padding: 2rem 8rem;
     .title {
       width: 100%;
       text-align: center;
@@ -135,11 +136,19 @@ const realizes = [
           font-size: 2rem;
           margin-bottom: 3rem;
         }
-        img {
-          border-radius: 50%;
+        h3 {
+          width: 14vw;
+          height: 12vh;
+        }
+        p {
+          color: #8f8f8f;
+          text-align: justify;
+        }
+        .img {
+          border-radius: 10%;
           position: absolute;
-          top: 0.5rem;
-          right: 0.5rem;
+          top: 1rem;
+          right: 1rem;
           scale: 0.9;
         }
       }
